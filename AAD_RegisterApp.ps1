@@ -36,6 +36,9 @@ Write-Output "Save these values for using them in your application"
 Write-Output "Subscription ID:" (Get-AzureRmContext).Subscription.SubscriptionId
 Write-Output "Tenant ID:" (Get-AzureRmContext).Tenant.TenantId
 Write-Output "Application ID:" $azureAdApplication.ApplicationId
+Write-Output "Service Principal Display Name:" $svcprincipal.DisplayName
+Write-Output "Service Principal Id:" $svcprincipal.Id
+Write-Output "Service Principal Role Assigment: " $roleassignment.RoleDefinitionName
 
 #$PlainTextSecret = ConvertFrom_SecureString $Secure_String_Pwd 
 #Write-Output "Application Secret:" $PlainTextSecret
