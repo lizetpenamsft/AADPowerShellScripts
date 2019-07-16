@@ -22,6 +22,7 @@ $Secure_String_Pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 # Create the Azure AD app
 $azureAdApplication = New-AzureRmADApplication -DisplayName $appName -HomePage $Uri -IdentifierUris $Uri -Password $Secure_String_Pwd 
 
+# Delays execution 10 seconds to give time to app registration task to complete
 Start-Sleep -s 10
 
 # Create a Service Principal for the app
